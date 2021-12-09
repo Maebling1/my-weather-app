@@ -4,7 +4,179 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My weather app</title>
+    <title>Weather App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/8f445309ad.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <h1>My Weather app</h1>
+
+      <div class="card body-card">
+        <div class="card-body">
+          <form class="search-form" id="search-form">
+            <div class="row">
+              <div class="col-8">
+                <input
+                  type="search"
+                  placeholder="Enter a city..."
+                  autofocus="on"
+                  autocomplete="off"
+                  id="city-input"
+                  class="form-control shadow-sm"
+                />
+              </div>
+              <div class="col-2">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="form-control btn btn-primary shadow-sm"
+                />
+              </div>
+
+              <button
+                type="button"
+                id="current-btn"
+                class="col-2 btn btn-success float-end"
+              >
+                Current
+              </button>
+            </div>
+          </form>
+
+          <h2 id="currentCity"></h2>
+
+          <div class="current-date">Sunday, 14 November</div>
+          <div class="row justify-content-around">
+            <div class="card main-info" style="width: 13rem">
+              <div class="card-body">
+                <h3 class="card-weather" id="description">
+                  Cloudy
+                  <br />
+                </h3>
+
+                <div class="main-temp">
+                  <span class="units">
+                    <a href="#" id="celsius-link">°C</a>
+                    |
+                    <a href="#" id="fahrenheit-link">°F</a>
+                  </span>
+                  <h4 id="temperature">10</h4>
+                </div>
+                <i class="fas fa-cloud cloudy-icon"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="row justify-content-around">
+            <div class="row row-cols-1 row-cols-md-3 g-3">
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <i class="fas fa-tint humidity-icon"></i>
+                    <p id="humidity">Humidity 65<span>%</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <i class="fas fa-umbrella precipitation-icon"></i>
+                    <p id="precipitation">Precipitation 7<span>%</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <i class="fas fa-wind"></i>
+                    <p id="wind">Wind 10<span>mph</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <div class="row justify-content-around">
+              <div class="col-2 next-temp">
+                <div class="days"><p>Mon</p></div>
+                <div class="weather-prev">
+                  <i class="fas fa-cloud-showers-heavy"></i>
+                  <p>
+                    7º
+                    <br />
+                    <span class="next-min-temp"> 13º </span>
+                  </p>
+                </div>
+              </div>
+              <div class="col-2 next-temp">
+                <div class="days"><p>Tue</p></div>
+                <div class="weather-prev">
+                  <i class="fas fa-cloud cloud-icon"></i>
+                  <p>
+                    4º
+                    <br />
+                    <span class="next-min-temp"> 11º </span>
+                  </p>
+                </div>
+              </div>
+              <div class="col-2 next-temp">
+                <div class="days">
+                  <p>Wed</p>
+                </div>
+                <div class="weather-prev">
+                  <i class="fas fa-cloud-showers-heavy rainy-icon"></i>
+                  <p>
+                    6º
+                    <br />
+                    <span class="next-min-temp"> 13º </span>
+                  </p>
+                </div>
+              </div>
+              <div class="col-2 next-temp">
+                <div class="days">
+                  <p>Thu</p>
+                </div>
+                <div class="weather-prev">
+                  <i class="fas fa-cloud cloud-icon"></i>
+                  <p>
+                    5º
+                    <br />
+                    <span class="next-min-temp"> 13º </span>
+                  </p>
+                </div>
+              </div>
+              <div class="col-2 next-temp">
+                <div class="days">
+                  <p>Fri</p>
+                </div>
+                <div class="weather-prev">
+                  <i class="fas fa-cloud-showers-heavy rainy-icon"></i>
+                  <p>
+                    8º
+                    <br />
+                    <span class="next-min-temp"> 12º </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/app.js"></script>
+  </body>
 </html>

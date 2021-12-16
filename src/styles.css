@@ -13,7 +13,7 @@ h1 {
 h2 {
   font-size: 22px;
   margin-top: 10px;
-  margin-bottom: -9px;
+  margin-bottom: -18px;
 }
 
 h3 {
@@ -21,13 +21,7 @@ h3 {
 }
 
 a {
-  color: black;
   text-decoration: none;
-  background-color: transparent;
-}
-
-a:hover {
-  color: black;
 }
 
 h4 {
@@ -42,7 +36,7 @@ h4 {
   position: relative;
   display: block;
   text-align: right;
-  margin-right: -11px;
+  margin-right: -14px;
 }
 .current-date {
   font-size: 16px;
@@ -60,11 +54,15 @@ h4 {
 
 .current-icon {
   display: block;
-  text-align: center;
+  margin: 0;
+  margin-top: -39px;
+  margin-bottom: -32px;
+  padding: 0;
+  width: 150px;
+  height: 150px;
 }
 
 .wind-icon {
   display: block;
   text-align: left;
-  text-align: center;
 }

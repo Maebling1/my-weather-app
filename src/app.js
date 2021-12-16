@@ -57,6 +57,11 @@ function weatherConditions(response) {
   precipication.innerHTML = `Precipication ${Math.round(
     response.data.clouds.all
   )}%`;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function searchLocation(position) {

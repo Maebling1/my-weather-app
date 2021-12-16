@@ -58,14 +58,13 @@ h4 {
   width: fit-content;
 }
 
-.cloudy-icon {
+.current-icon {
   display: block;
-  margin-top: -10px;
   text-align: center;
-  font-size: 80px;
 }
 
 .wind-icon {
   display: block;
   text-align: left;
+  text-align: center;
 }

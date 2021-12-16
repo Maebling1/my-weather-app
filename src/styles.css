@@ -13,6 +13,7 @@ h1 {
 h2 {
   font-size: 22px;
   margin-top: 10px;
+  margin-bottom: -9px;
 }
 
 h3 {
@@ -33,13 +34,15 @@ h4 {
   font-size: 80px;
   color: rgb(167, 167, 167);
   margin-top: -20px;
+  padding: 0;
 }
 
 .units {
+  padding: 0;
   position: relative;
   display: block;
   text-align: right;
-  margin-right: -17px;
+  margin-right: -11px;
 }
 .current-date {
   font-size: 16px;
@@ -49,7 +52,7 @@ h4 {
   border-radius: 25px;
   display: block;
   margin: auto;
-  margin-top: 5px;
+  margin-top: 27px;
   margin-bottom: 20px;
   padding: 10px 20px;
   width: fit-content;

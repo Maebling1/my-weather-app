@@ -1,7 +1,7 @@
 .container {
   padding: 20px;
   box-shadow: 5px 30px 100px rgb(50 50 100 / 18%);
-  border-radius: 15px;
+  border-radius: 12px;
 }
 
 h1,
@@ -59,7 +59,7 @@ a {
   display: block;
   margin: auto;
   margin-top: 27px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   padding: 10px 20px;
   width: fit-content;
 }
@@ -67,7 +67,7 @@ a {
 .current-icon {
   display: block;
   margin: 0;
-  margin-bottom: -20px;
+  margin-bottom: -30px;
   padding: 0;
   width: 150px;
   height: 150px;
@@ -115,8 +115,7 @@ p {
 .footer {
   display: block;
   text-align: center;
-  padding-bottom: 15px;
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 .body {

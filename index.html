@@ -19,10 +19,9 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
+       <h1>My Weather App</h1>
     <div class="container">
-      <h1>My Weather app</h1>
 
-      <div class="card body-card">
         <div class="card-body">
           <form class="search-form" id="search-form">
             <div class="row">
@@ -40,7 +39,7 @@
                 <input
                   type="submit"
                   value="Search"
-                  class="form-control btn btn-primary shadow-sm"
+                  class="form-control btn btn-dark shadow-sm"
                 />
               </div>
             </div>
@@ -55,10 +54,8 @@
                 <h3 class="card-weather" id="description"></h3>
 
                 <div class="main-temp">
-                  <span class="units">
-                  °C
-                  </span>
-                  <h4 id="temperature">10</h4>
+                  <span class=temp id="temperature">10</span>
+                  <span class="units">°C</span>
                 </div>
                 <img
                   class="current-icon"
@@ -76,7 +73,7 @@
                 <div class="card">
                   <div class="card-body">
                     <i class="fas fa-tint humidity-icon"></i>
-                    <p id="humidity">Humidity 65<span>%</span></p>
+                    <p id="humidity">Humidity<span>%</span></p>
                   </div>
                 </div>
               </div>
@@ -85,7 +82,7 @@
                 <div class="card">
                   <div class="card-body">
                     <i class="fas fa-umbrella precipitation-icon"></i>
-                    <p id="precipitation">Precipitation 7<span>%</span></p>
+                    <p id="precipitation">Precipitation<span>%</span></p>
                   </div>
                 </div>
               </div>
@@ -94,20 +91,21 @@
                 <div class="card">
                   <div class="card-body">
                     <i class="fas fa-wind"></i>
-                    <p id="wind">Wind 10<span>mph</span></p>
+                    <p id="wind">Wind<span>mph</span></p>
                   </div>
                 </div>
               </div>
             </div>
+            <div class="weather-forecast" id="forecast"></div>
           </div>
-<div class="weather-forecast" id="forecast"></div>
     </div>
+  
     <small class="footer">
         <a href="https://github.com/Maebling1/my-weather-app" target="_blank"
           >Open-source code on Github</a
         >
         by <strong> Maëline B.</strong>
-      </small>
+    </small>
     <script src="src/app.js"></script>
   </body>
 </html>

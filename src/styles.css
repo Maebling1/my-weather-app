@@ -85,3 +85,9 @@ h4 {
 .weather-forecast-temperatures {
   font-size: 13px;
 }
+
+.footer {
+  display: block;
+  text-align: center;
+  margin-bottom: 5px;
+}

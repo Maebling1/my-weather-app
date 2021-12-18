@@ -117,19 +117,13 @@ function weatherConditions(response) {
   getForecast(response.data.coord);
 }
 
-function searchLocation(position) {
+function search(city) {
   let apiKey = "51d8bdfeb22d20074ad84e043ba0c3c3";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
-
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(weatherConditions);
 }
 
-function getCurrentLocation(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(searchLocation);
-}
-
-function search(event) {
+function handleSubmit(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#city-input");
 
@@ -140,7 +134,6 @@ function search(event) {
 }
 
 let form = document.querySelector("#search-form");
-form.addEventListener("submit", search);
+form.addEventListener("submit", handleSubmit);
 
-let currentLocationButton = document.querySelector("#current-btn");
-currentLocationButton.addEventListener("click", getCurrentLocation);
+search("seoul");

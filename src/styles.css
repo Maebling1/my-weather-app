@@ -32,12 +32,10 @@ h4 {
 }
 
 .units {
-  padding: 0;
+  margin-left: 117px;
   position: relative;
-  display: block;
-  text-align: right;
-  margin-right: -14px;
 }
+
 .current-date {
   font-size: 16px;
   text-align: center;
